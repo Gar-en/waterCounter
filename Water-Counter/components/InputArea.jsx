@@ -1,11 +1,15 @@
+import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, SafeAreaView, View } from 'react-native';
 
-export const InputArea = ({label}) => {
+export const InputArea = props => {
+
+
+
     return (
-    <View style={styles.container}>
-        <Text style={styles.text}>{label}</Text>
+    <View style={styles.container}>{props.id}
+        <Text style={styles.text}>{props.name}</Text>
         <TextInput
-            style={styles.input}/>
+            style={styles.input} placeholder='0'/>
     </View>
     )
 }
@@ -29,3 +33,5 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
 })
+
+export default InputArea
